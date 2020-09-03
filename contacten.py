@@ -90,7 +90,7 @@ def contact_verwijderen(contacten):
         if verwijder_contact_naam in contacten:
             del contacten[verwijder_contact_naam]
             doorgaan2 = False
-            print("Je contacten lijst is aangepast.")
+            print(verwijder_contact_naam + " is uit je contactenlijst verwijderd.")
         elif verwijder_contact_naam == 'niemand':
             print("Hier is het menu weer.")
             doorgaan2 = False
@@ -110,7 +110,7 @@ def aantal_contacten(contacten):
     print("Je hebt "+ str(aantal) + " contacten.")
     
 def contacten_opslaan(contacten, naam):
-    #Hier komt de code voor als je er voor kiest om een contact op te slaan
+    ''''Hier komt de code voor als je er voor kiest om een contact op te slaan'''
     naam_bestand = input("hoe wil je je bestand gaan noemen: ")
     je_contacten = open(naam_bestand + ".txt", "w")
     je_contacten.writelines("Contacten van " + naam)
